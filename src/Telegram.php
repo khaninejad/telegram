@@ -66,7 +66,7 @@ class Telegram
      */
     public function sendMessage($params)
     {
-        return $this->sendRequest('sendMessage', $params);
+        return $this->sendRequest('sendPhoto', $params);
     }
 
     /**

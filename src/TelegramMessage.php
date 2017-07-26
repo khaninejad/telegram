@@ -58,7 +58,13 @@ class TelegramMessage
      */
     public function content($content)
     {
-        $this->payload['text'] = $content;
+        $this->payload['caption'] = $content;
+
+        return $this;
+    }
+    public function photo($photo)
+    {
+        $this->payload['photo'] = $photo;
 
         return $this;
     }

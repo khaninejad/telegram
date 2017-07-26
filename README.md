@@ -1,4 +1,4 @@
-# Telegram Notifications Channel for Laravel 5.3 [WIP]
+# Telegram Notifications Channel for Laravel 5.4 Send Photo Support
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/telegram.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/telegram)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -81,6 +81,7 @@ class InvoicePaid extends Notification
         return TelegramMessage::create()
             ->to($this->user->telegram_user_id) // Optional.
             ->content("*HELLO!* \n One of your invoices has been paid!") // Markdown supported.
+						 ->photo(url($this->thumbnail))
             ->button('View Invoice', $url); // Inline Button
     }
 }
@@ -142,6 +143,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 - [Syed Irfaq R.](https://github.com/irazasyed)
 - [All Contributors](../../contributors)
+- [کپی فای](https://copify.ir)
 
 ## License
 
